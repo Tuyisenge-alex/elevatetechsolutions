@@ -293,11 +293,11 @@ function Contact() {
             Have a project in mind, or want to join our training programs? Reach out — we'd love to hear from you.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <a href="mailto:hello@elevatetech.rw" className="rounded-full bg-gold-gradient px-8 py-4 text-sm font-semibold text-accent-foreground shadow-gold hover:scale-105 transition-transform">
-              hello@elevatetech.rw
+            <a href="mailto:tuyisengealex071@gmail.com" className="rounded-full bg-gold-gradient px-8 py-4 text-sm font-semibold text-accent-foreground shadow-gold hover:scale-105 transition-transform">
+              tuyisengealex071@gmail.com
             </a>
-            <a href="#" className="rounded-full glass px-8 py-4 text-sm font-semibold border border-gold/30 hover:border-gold transition-colors">
-              Kigali, Rwanda
+            <a href="tel:+250790566926" className="rounded-full glass px-8 py-4 text-sm font-semibold border border-gold/30 hover:border-gold transition-colors">
+              +250 790 566 926
             </a>
           </div>
         </div>
