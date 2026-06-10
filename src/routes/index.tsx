@@ -44,18 +44,7 @@ const volunteeringSessions = [
 ];
 
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Elevate Tech Solutions — Building Rwanda's Digital Future" },
-      { name: "description", content: "We design websites, school & business management systems, mobile apps, and database solutions — and train Rwanda's next generation of digital professionals." },
-      { property: "og:title", content: "Elevate Tech Solutions" },
-      { property: "og:description", content: "Building Rwanda's Digital Future, One Solution at a Time." },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
-  component: Home,
-});
+export const Route = createFileRoute("/")({ component: Home });
 
 const services = [
   { icon: "🌐", title: "Website Development", desc: "Modern, responsive, user-friendly websites that grow your brand and convert visitors into customers." },
