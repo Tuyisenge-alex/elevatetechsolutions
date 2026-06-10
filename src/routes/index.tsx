@@ -43,7 +43,7 @@ const team = [
   { name: "Arsene Kundwa", role: "Full-Stack Developer", img: null, initials: "AK" },
   { name: "Edmond Magaju", role: "Designer & Communications", img: null, initials: "EM" },
   { name: "Ivan Captain", role: "Network Security & Marketing", img: ivanAsset.url, initials: "IC" },
-  { name: "Billy", role: "Team Member", img: billyAsset.url, initials: "B" },
+  { name: "Billy", role: "Full-Stack Developer & Consultant in Charge", img: billyAsset.url, initials: "B" },
 ];
 
 function Home() {
