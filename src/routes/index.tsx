@@ -2,19 +2,46 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 import billyAsset from "@/assets/billy.asset.json";
-import alexAsset from "@/assets/alex.asset.json";
+import alexAsset from "@/assets/alex-pro.jpg.asset.json";
 import ivanAsset from "@/assets/ivan.asset.json";
 import kagarama1 from "@/assets/kagarama-1.jpg.asset.json";
 import kagarama2 from "@/assets/kagarama-2.jpg.asset.json";
 import kagarama3 from "@/assets/kagarama-3.jpg.asset.json";
 import kagarama4 from "@/assets/kagarama-4.jpg.asset.json";
+import ntango1 from "@/assets/ntango-1.jpg.asset.json";
+import ntango2 from "@/assets/ntango-2.jpg.asset.json";
+import ntango3 from "@/assets/ntango-3.jpg.asset.json";
 
-const volunteering = [
-  { src: kagarama2.url, caption: "Leading a Figma session at Kagarama Secondary School" },
-  { src: kagarama1.url, caption: "Students learning design fundamentals hands-on" },
-  { src: kagarama4.url, caption: "Live walkthrough of Canva and Google tools" },
-  { src: kagarama3.url, caption: "Mixed cohort exploring digital design together" },
+const volunteeringSessions = [
+  {
+    school: "Kagarama Secondary School",
+    date: "June 2026",
+    title: "Design fundamentals with Figma & Canva",
+    description:
+      "Our team spent time at Kagarama Secondary School introducing students to Figma and Canva — sharing practical design skills with Rwanda's next generation of creators.",
+    accent: "emerald" as const,
+    photos: [
+      { src: kagarama2.url, caption: "Leading a Figma session" },
+      { src: kagarama1.url, caption: "Students learning design fundamentals hands-on" },
+      { src: kagarama4.url, caption: "Live walkthrough of Canva and Google tools" },
+      { src: kagarama3.url, caption: "Mixed cohort exploring digital design together" },
+    ],
+  },
+  {
+    school: "Ntango Technical School",
+    date: "10 January 2026",
+    title: "Hands-on tech & digital skills workshop",
+    description:
+      "We visited Ntango Technical School for a full-day session — guiding students through practical digital tools, problem-solving, and a live walkthrough on their own laptops.",
+    accent: "gold" as const,
+    photos: [
+      { src: ntango1.url, caption: "Full classroom engaged in the live demo" },
+      { src: ntango2.url, caption: "Students following along on their laptops" },
+      { src: ntango3.url, caption: "One-on-one guidance during the workshop" },
+    ],
+  },
 ];
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
