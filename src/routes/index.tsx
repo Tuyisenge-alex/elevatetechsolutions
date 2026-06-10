@@ -4,6 +4,17 @@ import heroBg from "@/assets/hero-bg.jpg";
 import billyAsset from "@/assets/billy.asset.json";
 import alexAsset from "@/assets/alex.asset.json";
 import ivanAsset from "@/assets/ivan.asset.json";
+import kagarama1 from "@/assets/kagarama-1.jpg.asset.json";
+import kagarama2 from "@/assets/kagarama-2.jpg.asset.json";
+import kagarama3 from "@/assets/kagarama-3.jpg.asset.json";
+import kagarama4 from "@/assets/kagarama-4.jpg.asset.json";
+
+const volunteering = [
+  { src: kagarama2.url, caption: "Leading a Figma session at Kagarama Secondary School" },
+  { src: kagarama1.url, caption: "Students learning design fundamentals hands-on" },
+  { src: kagarama4.url, caption: "Live walkthrough of Canva and Google tools" },
+  { src: kagarama3.url, caption: "Mixed cohort exploring digital design together" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
