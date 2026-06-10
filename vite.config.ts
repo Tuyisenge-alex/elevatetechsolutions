@@ -8,10 +8,8 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   tanstackStart: {
+    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
+    // nitro/vite builds from this
     server: { entry: "server" },
   },
-  // Lovable expects extra config to be explicitly passed under options or nested inside the vite block safely:
-  vite: {
-    base: "/elevatetechsolutions/",
-  }
 });
