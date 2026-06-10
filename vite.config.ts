@@ -12,4 +12,11 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // ⬇️ ADD THIS NITRO BLOCK BELOW TO FORCE STATIC OUTPUT ⬇️
+  nitro: {
+    preset: "github-pages"
+  },
+  vite: {
+    base: "/elevatetechsolutions/"
+  }
 });
