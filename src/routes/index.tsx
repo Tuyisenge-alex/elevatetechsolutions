@@ -267,22 +267,44 @@ function Training() {
           <div className="max-w-3xl">
             <div className="text-xs font-semibold tracking-[0.2em] text-gold uppercase">Volunteering in action</div>
             <h3 className="mt-3 font-display text-3xl md:text-4xl font-bold leading-tight">
-              Teaching design at <span className="text-gradient-emerald">Kagarama Secondary School</span>.
+              Sharing skills with <span className="text-gradient-emerald">Rwanda's schools</span>.
             </h3>
             <p className="mt-4 text-muted-foreground">
-              This month our team spent time at Kagarama Secondary School introducing students to <span className="text-foreground font-medium">Figma</span> and <span className="text-foreground font-medium">Canva</span> — sharing practical design skills with Rwanda's next generation of creators.
+              Beyond client work, our team visits schools across Rwanda to mentor students on design, digital tools, and modern tech — equipping the next generation with practical, industry-ready skills.
             </p>
           </div>
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {volunteering.map((p, i) => (
-              <figure key={i} className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card-gradient hover:border-gold/60 transition-colors">
-                <div className="aspect-[4/5] overflow-hidden">
-                  <img src={p.src} alt={p.caption} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          <div className="mt-14 space-y-20">
+            {volunteeringSessions.map((session, idx) => (
+              <article key={session.school} className="relative">
+                <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 max-w-4xl">
+                  <div>
+                    <div className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] uppercase">
+                      <span className="text-gold">Session {String(idx + 1).padStart(2, "0")}</span>
+                      <span className="h-px w-8 bg-gold/40" />
+                      <span className="text-muted-foreground">{session.date}</span>
+                    </div>
+                    <h4 className="mt-4 font-display text-2xl md:text-3xl font-bold leading-tight">
+                      {session.title}
+                    </h4>
+                    <div className={`mt-2 text-sm font-medium ${session.accent === "emerald" ? "text-gradient-emerald" : "text-gradient-gold"}`}>
+                      📍 {session.school}
+                    </div>
+                  </div>
+                  <p className="md:max-w-md text-muted-foreground">{session.description}</p>
                 </div>
-                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/80 to-transparent p-4 pt-12 text-xs text-muted-foreground">
-                  {p.caption}
-                </figcaption>
-              </figure>
+                <div className={`mt-8 grid gap-5 ${session.photos.length === 4 ? "sm:grid-cols-2 lg:grid-cols-4" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
+                  {session.photos.map((p, i) => (
+                    <figure key={i} className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card-gradient hover:border-gold/60 transition-colors">
+                      <div className="aspect-[4/5] overflow-hidden">
+                        <img src={p.src} alt={p.caption} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                      </div>
+                      <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/80 to-transparent p-4 pt-12 text-xs text-muted-foreground">
+                        {p.caption}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </article>
             ))}
           </div>
         </div>
