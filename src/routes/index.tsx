@@ -4,6 +4,17 @@ import heroBg from "@/assets/hero-bg.jpg";
 import billyAsset from "@/assets/billy.asset.json";
 import alexAsset from "@/assets/alex.asset.json";
 import ivanAsset from "@/assets/ivan.asset.json";
+import kagarama1 from "@/assets/kagarama-1.jpg.asset.json";
+import kagarama2 from "@/assets/kagarama-2.jpg.asset.json";
+import kagarama3 from "@/assets/kagarama-3.jpg.asset.json";
+import kagarama4 from "@/assets/kagarama-4.jpg.asset.json";
+
+const volunteering = [
+  { src: kagarama2.url, caption: "Leading a Figma session at Kagarama Secondary School" },
+  { src: kagarama1.url, caption: "Students learning design fundamentals hands-on" },
+  { src: kagarama4.url, caption: "Live walkthrough of Canva and Google tools" },
+  { src: kagarama3.url, caption: "Mixed cohort exploring digital design together" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -224,6 +235,29 @@ function Training() {
               <div className="mt-2 text-sm text-muted-foreground">{c.d}</div>
             </div>
           ))}
+        </div>
+        <div className="mt-24">
+          <div className="max-w-3xl">
+            <div className="text-xs font-semibold tracking-[0.2em] text-gold uppercase">Volunteering in action</div>
+            <h3 className="mt-3 font-display text-3xl md:text-4xl font-bold leading-tight">
+              Teaching design at <span className="text-gradient-emerald">Kagarama Secondary School</span>.
+            </h3>
+            <p className="mt-4 text-muted-foreground">
+              This month our team spent time at Kagarama Secondary School introducing students to <span className="text-foreground font-medium">Figma</span> and <span className="text-foreground font-medium">Canva</span> — sharing practical design skills with Rwanda's next generation of creators.
+            </p>
+          </div>
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {volunteering.map((p, i) => (
+              <figure key={i} className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card-gradient hover:border-gold/60 transition-colors">
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img src={p.src} alt={p.caption} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                </div>
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/80 to-transparent p-4 pt-12 text-xs text-muted-foreground">
+                  {p.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </div>
     </section>
