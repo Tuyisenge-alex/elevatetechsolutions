@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 import billyAsset from "@/assets/billy.asset.json";
-import alexAsset from "@/assets/alex-pro.jpg.asset.json";
+import alexAsset from "@/assets/alex-suit.jpg.asset.json";
 import ivanAsset from "@/assets/ivan.asset.json";
 import kagarama1 from "@/assets/kagarama-1.jpg.asset.json";
 import kagarama2 from "@/assets/kagarama-2.jpg.asset.json";
@@ -80,8 +80,8 @@ const team = [
   { name: "Alex Tuyisenge", role: "Chief Technical Operations", img: alexAsset.url, initials: "AT" },
   { name: "Arsene Kundwa", role: "Full-Stack Developer", img: null, initials: "AK" },
   { name: "Edmond Magaju", role: "Project Coordinator", img: null, initials: "EM" },
-  { name: "Ivan Captain", role: "Network Security & Designer", img: ivanAsset.url, initials: "IC" },
-  { name: "Billy", role: "Full-Stack Developer & Consultant in Charge", img: billyAsset.url, initials: "B" },
+  { name: "Ivan Murisa", role: "Network Security & Designer", img: ivanAsset.url, initials: "IM" },
+  { name: "Billy Ishimwe", role: "Full-Stack Developer & Consultant in Charge", img: billyAsset.url, initials: "BI" },
 ];
 
 function Home() {
