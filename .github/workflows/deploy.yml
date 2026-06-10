@@ -31,17 +31,16 @@ jobs:
       - name: Upload build folder
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .output/public
+          path: dist #  Restored back to your original 'dist' path
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    # ⬇️ THIS BLOCK BELOW IS WHAT GENERATES THE URL LINK ⬇️
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment # Added an ID so the environment block above can read the URL
+        id: deployment
         uses: actions/deploy-pages@v4
