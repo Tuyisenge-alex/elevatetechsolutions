@@ -327,7 +327,7 @@ function Team() {
   return (
     <section id="team" className="py-28 px-6">
       <div className="mx-auto max-w-7xl">
-        <SectionHeader tag="Our team" title={<>The minds behind <span className="text-gradient-emerald">Elevate Tech</span>.</>} desc="A passionate team of co-founders building Rwanda's digital future." />
+        <SectionHeader tag="Our team" title={<>The minds behind <span className="text-gradient-emerald">Kwanda Tech</span>.</>} desc="A passionate team of co-founders building Rwanda's digital future." />
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {team.map(m => (
             <div key={m.name} className="group">
