@@ -12,6 +12,7 @@ import kagarama4 from "@/assets/kagarama-4.jpg.asset.json";
 import ntango1 from "@/assets/ntango-1.jpg.asset.json";
 import ntango2 from "@/assets/ntango-2.jpg.asset.json";
 import ntango3 from "@/assets/ntango-3.jpg.asset.json";
+import kwandaLogo from "@/assets/kwanda-logo.png.asset.json";
 
 const volunteeringSessions = [
   {
@@ -103,8 +104,8 @@ function Header() {
     <header className="fixed top-0 z-50 w-full glass">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold-gradient font-bold text-accent-foreground">E</div>
-          <span className="font-display text-lg font-bold tracking-tight">Elevate <span className="text-gradient-gold">Tech</span></span>
+          <img src={kwandaLogo.url} alt="Kwanda Tech Solutions" className="h-10 w-auto" />
+          <span className="font-display text-lg font-bold tracking-tight">Kwanda <span className="text-gradient-gold">Tech</span></span>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
           {links.map(l => <a key={l.href} href={l.href} className="text-muted-foreground hover:text-foreground transition-colors">{l.label}</a>)}
@@ -188,7 +189,7 @@ function About() {
       <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-16 items-start">
         <SectionHeader tag="About us" title={<>Bridging the gap between <span className="text-gradient-emerald">technology and growth</span>.</>} />
         <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
-          <p>Elevate Tech Solutions is a Kigali-based startup helping businesses, schools, universities, organizations, and entrepreneurs transform their operations through innovative digital solutions.</p>
+          <p>Kwanda Tech Solutions is a Kigali-based startup helping businesses, schools, universities, organizations, and entrepreneurs transform their operations through innovative digital solutions.</p>
           <p>As Rwanda becomes a leading digital economy, we partner with institutions to improve efficiency, productivity, and customer experience through modern technology — tailored to the Rwandan market.</p>
         </div>
       </div>
@@ -384,11 +385,11 @@ function Footer() {
     <footer className="border-t border-border/50 py-12 px-6">
       <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gold-gradient font-bold text-accent-foreground">E</div>
-          <span className="font-display font-bold">Elevate Tech Solutions</span>
+          <img src={kwandaLogo.url} alt="Kwanda Tech Solutions" className="h-8 w-auto" />
+          <span className="font-display font-bold">Kwanda Tech Solutions</span>
         </div>
         <p className="text-sm text-muted-foreground text-center">Building Rwanda's Digital Future, One Solution at a Time.</p>
-        <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Elevate Tech</p>
+        <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Kwanda Tech</p>
       </div>
     </footer>
   );
