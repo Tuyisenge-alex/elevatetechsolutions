@@ -309,7 +309,7 @@ function WhyUs() {
     <section className="py-28 px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-emerald-gradient opacity-[0.08]" />
       <div className="relative mx-auto max-w-7xl">
-        <SectionHeader tag="Why choose us" title={<>Reasons partners <span className="text-gradient-gold">trust Elevate</span>.</>} />
+        <SectionHeader tag="Why choose us" title={<>Reasons partners <span className="text-gradient-gold">trust Kwanda Tech</span>.</>} />
         <div className="mt-14 grid sm:grid-cols-2 gap-4">
           {reasons.map(r => (
             <div key={r} className="flex items-start gap-4 glass rounded-xl p-5">
@@ -327,7 +327,7 @@ function Team() {
   return (
     <section id="team" className="py-28 px-6">
       <div className="mx-auto max-w-7xl">
-        <SectionHeader tag="Our team" title={<>The minds behind <span className="text-gradient-emerald">Elevate Tech</span>.</>} desc="A passionate team of co-founders building Rwanda's digital future." />
+        <SectionHeader tag="Our team" title={<>The minds behind <span className="text-gradient-emerald">Kwanda Tech</span>.</>} desc="A passionate team of co-founders building Rwanda's digital future." />
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {team.map(m => (
             <div key={m.name} className="group">
