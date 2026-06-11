@@ -104,7 +104,7 @@ function Header() {
     <header className="fixed top-0 z-50 w-full glass">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2">
-          <img src={kwandaLogo.url} alt="Kwanda Tech Solutions" className="h-10 w-auto" />
+          <img src={kwandaLogo.url} alt="Kwanda Tech Solutions" className="h-14 w-auto" />
           <span className="font-display text-lg font-bold tracking-tight">Kwanda <span className="text-gradient-gold">Tech</span></span>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
