@@ -103,9 +103,11 @@ function Header() {
   return (
     <header className="fixed top-0 z-50 w-full glass">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center gap-2">
-          <img src={kwandaLogo.url} alt="Kwanda Tech Solutions" className="h-14 w-auto" />
-          <span className="font-display text-lg font-bold tracking-tight">Kwanda <span className="text-gradient-gold">Tech</span></span>
+        <a href="#top" className="flex items-center gap-3">
+          <div className="flex items-center justify-center rounded-xl bg-white/90 p-1.5 shadow-lg ring-1 ring-black/5">
+            <img src={kwandaLogo.url} alt="Kwanda Tech Solutions" className="h-16 w-auto" />
+          </div>
+          <span className="font-display text-xl font-bold tracking-tight">Kwanda <span className="text-gradient-gold">Tech</span></span>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
           {links.map(l => <a key={l.href} href={l.href} className="text-muted-foreground hover:text-foreground transition-colors">{l.label}</a>)}
@@ -384,8 +386,10 @@ function Footer() {
   return (
     <footer className="border-t border-border/50 py-12 px-6">
       <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-2">
-          <img src={kwandaLogo.url} alt="Kwanda Tech Solutions" className="h-8 w-auto" />
+        <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center rounded-lg bg-white/90 p-1 shadow-md ring-1 ring-black/5">
+            <img src={kwandaLogo.url} alt="Kwanda Tech Solutions" className="h-10 w-auto" />
+          </div>
           <span className="font-display font-bold">Kwanda Tech Solutions</span>
         </div>
         <p className="text-sm text-muted-foreground text-center">Building Rwanda's Digital Future, One Solution at a Time.</p>
